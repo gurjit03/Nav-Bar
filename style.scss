@@ -1,0 +1,87 @@
+html,body,header,div,nav,ul,li,a,p,h1 {
+	margin : 0;
+	padding : 0;
+}
+
+$color : rgba(109,118,120,.8);
+
+header {
+	width : auto;
+	height : 60px;	
+	border : 1px solid $color;
+	nav {
+		width : 400px;
+		height : 100%;
+		margin : 0 auto;
+		position: relative;
+		ul {
+			display: inline-block;
+			height : 30px;
+			margin-top : 3%;
+			margin-left: 10%;
+			li {
+				float : left;
+				list-style : none;
+				margin : 5px;
+				a {
+					text-decoration : none;
+					font-size : 18px;
+					word-spacing : 1px;
+					font-family : monospace;
+					color : rgba(109,165,181,1);
+					
+					position : relative;
+				}
+
+				a::after {
+					top : 9px;
+					left : 0;
+					right : 0;
+					margin-left: auto;
+					margin-right: auto;
+					position : absolute;
+					content : '';
+					width : 50px;
+					height : 3px;
+					background: $color;
+					text-align: center;
+					opacity : 0;
+					transition : all .2s ease-in;
+				}
+				a:hover {
+					color : rgba(116,171,189,1);
+				}
+
+				a:hover::after {
+					top : 20px;
+					opacity : 1;
+				}
+			}
+		} 
+	}
+}
+
+div[id] {
+	
+	margin: 0;
+	width : auto;
+	min-height : 600px;
+	font-family : monospace;
+	h1 {
+		padding: 8px 0;
+		color : rgba(0,0,0, .9);
+		text-align : center;
+		font-weight: bold;
+		font-size : 50px;
+	}
+	p {
+		max-width : 600px;
+		margin : 5px auto;
+		font-size : 16px;
+		word-spacing : 1px;
+	}
+}
+
+#home,#lorem {
+	background: rgba(185,198,201,1);
+}
